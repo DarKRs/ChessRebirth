@@ -17,7 +17,7 @@ namespace ChessRebirth.Views
     /// <summary>
     /// Логика взаимодействия для PieceView.xaml
     /// </summary>
-    public partial class PieceView : Window
+    public partial class PieceView : UserControl
     {
         public PieceView()
         {

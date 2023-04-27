@@ -17,7 +17,7 @@ namespace ChessRebirth.Views
     /// <summary>
     /// Логика взаимодействия для BoardView.xaml
     /// </summary>
-    public partial class BoardView : Window
+    public partial class BoardView : UserControl
     {
         public BoardView()
         {
