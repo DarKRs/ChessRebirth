@@ -59,6 +59,7 @@
     <Compile Include="Services\MoveService.cs" />
     <Compile Include="Utils\Enums.cs" />
     <Compile Include="ViewModels\BoardViewModel.cs" />
+    <Compile Include="ViewModels\CellViewModel.cs" />
     <Compile Include="ViewModels\GameViewModel.cs" />
     <Compile Include="ViewModels\PieceViewModel.cs" />
     <Compile Include="Views\BoardView.xaml.cs">
