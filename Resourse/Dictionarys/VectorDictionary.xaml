@@ -1,0 +1,102 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Geometry x:Key="chess_knight_blackGeometry">F1 M512,512z M0,0z M60.81,476.91L360.81,476.91 360.81,416.91 60.81,416.91 60.81,476.91z M294.6,129.61L308.54,137C340.42,93.38,369.88,105.15,369.88,105.15L348.26,158.15 383.9,177.15 386.77,210.15 451.19,318.9 407.64,348.27C407.64,348.27 380.82,311.88 367.99,304.61 357.33,298.61 326.77,294.36 311.82,292.61L244.28,215.7 232.28,226.26 269.43,268.57C269.3,268.75 269.18,268.94 269.05,269.14 233.27,327.31 292.05,374.83 337.54,400.92L84.14,400.92C93,85,294.6,129.61,294.6,129.61z</Geometry>
+    <DrawingGroup x:Key="chess_knight_blackDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource chess_knight_blackGeometry}" />
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_knight_blackDrawingImage" Drawing="{StaticResource chess_knight_blackDrawingGroup}" />
+    <Geometry x:Key="chess_queen_blackGeometry">F1 M512,512z M0,0z M477.518,181.966A25,25,0,0,1,442.608,204.966L380.318,355.226 131.398,355.226 69.1579999999999,205.036A25,25,0,1,1,78.8879999999999,197.746L165.888,268.946 186.808,142.546A25,25,0,1,1,201.508,140.696L255.818,257.696 310.238,140.396A25,25,0,1,1,324.818,142.476L345.748,268.896 433.008,197.596A25,25,0,1,1,477.518,181.966z M405.858,423.216L105.858,423.216 105.858,483.216 405.858,483.216 405.858,423.216z M378.108,371.216L133.888,371.216 133.888,407.216 378.108,407.216 378.108,371.216z</Geometry>
+    <DrawingGroup x:Key="chess_queen_blackDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource chess_queen_blackGeometry}" />
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_queen_blackDrawingImage" Drawing="{StaticResource chess_queen_blackDrawingGroup}" />
+    <Geometry x:Key="chess_rook_blackGeometry">F1 M512,512z M0,0z M406,484.7L106,484.7 106,424.7 406,424.7 406,484.7z M349.33,153.87L299.28,153.87 299.28,91.3 216.89,91.3 216.89,153.87 162.67,153.87 162.67,91.3 108.44,91.3 108.44,204.97 403.56,204.97 403.56,91.3 349.33,91.3 349.33,153.87z M372.68,221.1L139.32,221.1 139.32,408.7 372.68,408.7 372.68,221.1z</Geometry>
+    <DrawingGroup x:Key="chess_rook_blackDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource chess_rook_blackGeometry}" />
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_rook_blackDrawingImage" Drawing="{StaticResource chess_rook_blackDrawingGroup}" />
+    <Geometry x:Key="chess_bishop_whiteGeometry">F1 M675.84,675.84z M0,0z M406.02,476.915L106.02,476.915 106.02,416.915 406.02,416.915 406.02,476.915z M322.56,295.915L189.48,295.915 189.48,313.565 322.56,313.565 322.56,295.915z M334.34,218.225A200,200,0,0,1,324.95,279.915L187.09,279.915A200,200,0,0,1,177.7,218.225C177.7,159.135,201.52,109.225,234.11,93.555A33.34,33.34,0,1,1,277.93,93.555C310.52,109.265,334.34,159.135,334.34,218.225z M283.27,169.315L264.02,169.315 264.02,145.395 248.02,145.395 248.02,169.315 228.76,169.315 228.76,185.315 248.02,185.315 248.02,236.855 264.02,236.855 264.02,185.315 283.27,185.315 283.27,169.315z M321.42,350.005L321.42,329.565 190.62,329.565 190.62,350.005 93.29,350.005 93.29,350.115 142.75,399.575 224.83,399.575 255.98,363.575 287.13,399.575 369.57,399.575 418.44,350.705 418.71,350.015 321.42,350.015z</Geometry>
+    <DrawingGroup x:Key="chess_bishop_whiteDrawingGroup" ClipGeometry="M-81.92,-81.92 V593.92 H593.92 V-81.92 H-81.92 Z">
+        <DrawingGroup.Transform>
+            <TranslateTransform X="81.92" Y="81.92" />
+        </DrawingGroup.Transform>
+        <DrawingGroup Opacity="1">
+            <GeometryDrawing Brush="#FFFAFAFA" Geometry="{StaticResource chess_bishop_whiteGeometry}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FF000000" Thickness="8.192" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_bishop_whiteDrawingImage" Drawing="{StaticResource chess_bishop_whiteDrawingGroup}" />
+    <Geometry x:Key="chess_pawn_whiteGeometry">F1 M512,512z M0,0z M312.07,194.46A56.07,56.07,0,1,1,256,138.39A56.07,56.07,0,0,1,312.07,194.46z M406,418.01L106,418.01 106,478.01 406,478.01 406,418.01z M282.33,261.52A71.81,71.81,0,0,1,230.18,261.72C229.45,320.63,167.83,375.78,133.43,402L378.9,402C344.81,375.67,283.46,320.22,282.33,261.52z</Geometry>
+    <DrawingGroup x:Key="chess_pawn_whiteDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <DrawingGroup Opacity="1">
+            <GeometryDrawing Brush="#FFFFFFFF" Geometry="{StaticResource chess_pawn_whiteGeometry}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FF000000" Thickness="10.752" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_pawn_whiteDrawingImage" Drawing="{StaticResource chess_pawn_whiteDrawingGroup}" />
+    <Geometry x:Key="chess_pawn_blackGeometry">F1 M512,512z M0,0z M312.07,194.46A56.07,56.07,0,1,1,256,138.39A56.07,56.07,0,0,1,312.07,194.46z M406,418.01L106,418.01 106,478.01 406,478.01 406,418.01z M282.33,261.52A71.81,71.81,0,0,1,230.18,261.72C229.45,320.63,167.83,375.78,133.43,402L378.9,402C344.81,375.67,283.46,320.22,282.33,261.52z</Geometry>
+    <DrawingGroup x:Key="chess_pawn_blackDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource chess_pawn_blackGeometry}" />
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_pawn_blackDrawingImage" Drawing="{StaticResource chess_pawn_blackDrawingGroup}" />
+    <Geometry x:Key="chess_rook_whiteGeometry">F1 M512,512z M0,0z M406,484.7L106,484.7 106,424.7 406,424.7 406,484.7z M349.33,153.87L299.28,153.87 299.28,91.3 216.89,91.3 216.89,153.87 162.67,153.87 162.67,91.3 108.44,91.3 108.44,204.97 403.56,204.97 403.56,91.3 349.33,91.3 349.33,153.87z M372.68,221.1L139.32,221.1 139.32,408.7 372.68,408.7 372.68,221.1z</Geometry>
+    <DrawingGroup x:Key="chess_rook_whiteDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <DrawingGroup Opacity="1">
+            <GeometryDrawing Brush="#FFFFFFFF" Geometry="{StaticResource chess_rook_whiteGeometry}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FF000000" Thickness="9.728" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_rook_whiteDrawingImage" Drawing="{StaticResource chess_rook_whiteDrawingGroup}" />
+    <Geometry x:Key="chess_king_blackGeometry">F1 M512,512z M0,0z M405.995,477.15L105.995,477.15 105.995,417.15 405.995,417.15 405.995,477.15z M395.695,370.02L116.295,370.02A96.88,96.88,0,0,1,122.945,401.14L389.045,401.14A96.88,96.88,0,0,1,395.695,370.02z M255.995,128.96A35.76,35.76,0,0,0,220.235,164.72C220.235,214.88 255.995,264.06 255.995,264.06 255.995,264.06 291.755,214.88 291.755,164.72A35.76,35.76,0,0,0,255.995,128.96z M263.995,113.58L263.995,94.24 282.355,94.24 282.355,78.24 263.995,78.24 263.995,54.85 247.995,54.85 247.995,78.24 229.635,78.24 229.635,94.24 247.995,94.24 247.995,113.62A51.9,51.9,0,0,1,263.995,113.58z M345.635,164.94A98.74,98.74,0,0,0,307.505,172.55C304.275,224.3,270.435,271.4,268.925,273.48L263.995,280.24 263.995,354 403.995,354C420.565,327.85,444.775,311.59,444.775,264A99.13,99.13,0,0,0,345.635,164.93z M204.475,172.55A99.16,99.16,0,0,0,67.225,264.06C67.225,311.61,91.435,327.88,108.005,354.06L247.995,354.06 247.995,280.24 243.055,273.45C241.545,271.4,207.715,224.3,204.475,172.55z</Geometry>
+    <DrawingGroup x:Key="chess_king_blackDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource chess_king_blackGeometry}" />
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_king_blackDrawingImage" Drawing="{StaticResource chess_king_blackDrawingGroup}" />
+    <Geometry x:Key="chess_bishop_blackGeometry">F1 M512,512z M0,0z M406.02,476.915L106.02,476.915 106.02,416.915 406.02,416.915 406.02,476.915z M322.56,295.915L189.48,295.915 189.48,313.565 322.56,313.565 322.56,295.915z M334.34,218.225A200,200,0,0,1,324.95,279.915L187.09,279.915A200,200,0,0,1,177.7,218.225C177.7,159.135,201.52,109.225,234.11,93.555A33.34,33.34,0,1,1,277.93,93.555C310.52,109.265,334.34,159.135,334.34,218.225z M283.27,169.315L264.02,169.315 264.02,145.395 248.02,145.395 248.02,169.315 228.76,169.315 228.76,185.315 248.02,185.315 248.02,236.855 264.02,236.855 264.02,185.315 283.27,185.315 283.27,169.315z M321.42,350.005L321.42,329.565 190.62,329.565 190.62,350.005 93.29,350.005 93.29,350.115 142.75,399.575 224.83,399.575 255.98,363.575 287.13,399.575 369.57,399.575 418.44,350.705 418.71,350.015 321.42,350.015z</Geometry>
+    <DrawingGroup x:Key="chess_bishop_blackDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <GeometryDrawing Brush="#FF000000" Geometry="{StaticResource chess_bishop_blackGeometry}" />
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_bishop_blackDrawingImage" Drawing="{StaticResource chess_bishop_blackDrawingGroup}" />
+    <Geometry x:Key="chess_knight_whiteGeometry">F1 M512,512z M0,0z M60.81,476.91L360.81,476.91 360.81,416.91 60.81,416.91 60.81,476.91z M294.6,129.61L308.54,137C340.42,93.38,369.88,105.15,369.88,105.15L348.26,158.15 383.9,177.15 386.77,210.15 451.19,318.9 407.64,348.27C407.64,348.27 380.82,311.88 367.99,304.61 357.33,298.61 326.77,294.36 311.82,292.61L244.28,215.7 232.28,226.26 269.43,268.57C269.3,268.75 269.18,268.94 269.05,269.14 233.27,327.31 292.05,374.83 337.54,400.92L84.14,400.92C93,85,294.6,129.61,294.6,129.61z</Geometry>
+    <DrawingGroup x:Key="chess_knight_whiteDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <DrawingGroup Opacity="1">
+            <GeometryDrawing Brush="#FFFFFFFF" Geometry="{StaticResource chess_knight_whiteGeometry}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FF000000" Thickness="15.872" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_knight_whiteDrawingImage" Drawing="{StaticResource chess_knight_whiteDrawingGroup}" />
+    <Geometry x:Key="chess_queen_whiteGeometry">F1 M512,512z M0,0z M477.518,181.966A25,25,0,0,1,442.608,204.966L380.318,355.226 131.398,355.226 69.1579999999999,205.036A25,25,0,1,1,78.8879999999999,197.746L165.888,268.946 186.808,142.546A25,25,0,1,1,201.508,140.696L255.818,257.696 310.238,140.396A25,25,0,1,1,324.818,142.476L345.748,268.896 433.008,197.596A25,25,0,1,1,477.518,181.966z M405.858,423.216L105.858,423.216 105.858,483.216 405.858,483.216 405.858,423.216z M378.108,371.216L133.888,371.216 133.888,407.216 378.108,407.216 378.108,371.216z</Geometry>
+    <DrawingGroup x:Key="chess_queen_whiteDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <DrawingGroup Opacity="1">
+            <GeometryDrawing Brush="#FFFFFFFF" Geometry="{StaticResource chess_queen_whiteGeometry}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FF000000" Thickness="15.36" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_queen_whiteDrawingImage" Drawing="{StaticResource chess_queen_whiteDrawingGroup}" />
+    <Geometry x:Key="chess_king_whiteGeometry">F1 M512,512z M0,0z M405.995,477.15L105.995,477.15 105.995,417.15 405.995,417.15 405.995,477.15z M395.695,370.02L116.295,370.02A96.88,96.88,0,0,1,122.945,401.14L389.045,401.14A96.88,96.88,0,0,1,395.695,370.02z M255.995,128.96A35.76,35.76,0,0,0,220.235,164.72C220.235,214.88 255.995,264.06 255.995,264.06 255.995,264.06 291.755,214.88 291.755,164.72A35.76,35.76,0,0,0,255.995,128.96z M263.995,113.58L263.995,94.24 282.355,94.24 282.355,78.24 263.995,78.24 263.995,54.85 247.995,54.85 247.995,78.24 229.635,78.24 229.635,94.24 247.995,94.24 247.995,113.62A51.9,51.9,0,0,1,263.995,113.58z M345.635,164.94A98.74,98.74,0,0,0,307.505,172.55C304.275,224.3,270.435,271.4,268.925,273.48L263.995,280.24 263.995,354 403.995,354C420.565,327.85,444.775,311.59,444.775,264A99.13,99.13,0,0,0,345.635,164.93z M204.475,172.55A99.16,99.16,0,0,0,67.225,264.06C67.225,311.61,91.435,327.88,108.005,354.06L247.995,354.06 247.995,280.24 243.055,273.45C241.545,271.4,207.715,224.3,204.475,172.55z</Geometry>
+    <DrawingGroup x:Key="chess_king_whiteDrawingGroup" ClipGeometry="M0,0 V512 H512 V0 H0 Z">
+        <DrawingGroup Opacity="1">
+            <GeometryDrawing Brush="#FFFFFFFF" Geometry="{StaticResource chess_king_whiteGeometry}">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FF000000" Thickness="11.776" StartLineCap="Flat" EndLineCap="Flat" LineJoin="Miter" />
+                </GeometryDrawing.Pen>
+            </GeometryDrawing>
+        </DrawingGroup>
+    </DrawingGroup>
+    <DrawingImage x:Key="chess_king_whiteDrawingImage" Drawing="{StaticResource chess_king_whiteDrawingGroup}" />
+</ResourceDictionary>
