@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ChessRebirth.Utils;
 
 namespace ChessRebirth.Models
 {
     //Шахматная фигура
-    internal class Piece
+    public class Piece
     {
+        public int Id { get; set; }
+        public PieceType Type { get; set; }
+        public PieceColor Color { get; set; }
+        public int PositionX { get; set; }
+        public int PositionY { get; set; }
+        public Board Board { get; set; }
+        public int BoardId { get; set; }
     }
 }

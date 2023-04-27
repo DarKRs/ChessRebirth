@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ChessRebirth.Models
 {
-    internal class Player
+    public class Player
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public bool IsAI { get; set; }
     }
 }

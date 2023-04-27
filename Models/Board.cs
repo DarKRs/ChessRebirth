@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace ChessRebirth.Models
 {
-    internal class Board
+    public class Board
     {
+        public int Id { get; set; }
+        public List<Piece> Pieces { get; set; }
+
+        public Board()
+        {
+            Pieces = new List<Piece>();
+        }
     }
 }

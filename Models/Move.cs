@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace ChessRebirth.Models
 {
-    internal class Move
+    public class Move
     {
+        public int Id { get; set; }
+        public int FromX { get; set; }
+        public int FromY { get; set; }
+        public int ToX { get; set; }
+        public int ToY { get; set; }
+        public GameHistory GameHistory { get; set; }
+        public int GameHistoryId { get; set; }
     }
 }
