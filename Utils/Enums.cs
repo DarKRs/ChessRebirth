@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace ChessRebirth.Utils
 {
-    internal class Enums
+    public enum PieceType
     {
+        Pawn,
+        Rook,
+        Knight,
+        Bishop,
+        Queen,
+        King,
+        None
+    }
+
+    public enum PieceColor
+    {
+        White,
+        Black
     }
 }
