@@ -15,5 +15,7 @@ namespace ChessRebirth.Models
         public int ToY { get; set; }
         public GameHistory GameHistory { get; set; }
         public int GameHistoryId { get; set; }
+
+        public Piece TargetPiece { get; set; }
     }
 }

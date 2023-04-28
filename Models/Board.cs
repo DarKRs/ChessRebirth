@@ -15,5 +15,10 @@ namespace ChessRebirth.Models
         {
             Pieces = new List<Piece>();
         }
+
+        public Piece GetPiece(int x, int y)
+        {
+            return Pieces.FirstOrDefault(piece => piece.PositionX == x && piece.PositionY == y);
+        }
     }
 }
