@@ -62,6 +62,8 @@
     <Compile Include="MoveGenerators\PawnMoveGenerator.cs" />
     <Compile Include="MoveGenerators\QueenMoveGenerator.cs" />
     <Compile Include="MoveGenerators\RookMoveGenerator.cs" />
+    <Compile Include="Services\AI\IAIPlayerService.cs" />
+    <Compile Include="Services\AI\LearningAIPlayerService.cs" />
     <Compile Include="Services\BoardService.cs" />
     <Compile Include="Services\MoveService.cs" />
     <Compile Include="Utils\Enums.cs" />
