@@ -55,6 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MoveGenerators\BishopMoveGenerator.cs" />
+    <Compile Include="MoveGenerators\IPieceMoveGenerator.cs" />
+    <Compile Include="MoveGenerators\KingMoveGenerator.cs" />
+    <Compile Include="MoveGenerators\KnightMoveGenerator.cs" />
+    <Compile Include="MoveGenerators\PawnMoveGenerator.cs" />
+    <Compile Include="MoveGenerators\QueenMoveGenerator.cs" />
+    <Compile Include="MoveGenerators\RookMoveGenerator.cs" />
     <Compile Include="Services\BoardService.cs" />
     <Compile Include="Services\MoveService.cs" />
     <Compile Include="Utils\Enums.cs" />
