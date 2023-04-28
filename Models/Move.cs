@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChessRebirth.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace ChessRebirth.Models
         public int ToY { get; set; }
         public GameHistory GameHistory { get; set; }
         public int GameHistoryId { get; set; }
-
         public Piece TargetPiece { get; set; }
+        public PieceType? PromotionPieceType { get; set; }
     }
 }
