@@ -1,4 +1,5 @@
-﻿using ChessRebirth.Utils;
+﻿using ChessRebirth.Models;
+using ChessRebirth.Utils;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,6 +21,8 @@ namespace ChessRebirth.ViewModels
             InitializeCells();
         }
 
+
+        //Добавление фигур на доску
         private void InitializeCells()
         {
             for (int i = 0; i < 8; i++)
@@ -56,19 +59,41 @@ namespace ChessRebirth.ViewModels
                         }
 
                         PieceColor pieceColor = i == 0 ? PieceColor.Black : PieceColor.White;
-                        cell.Piece = new PieceViewModel(pieceType, pieceColor);
+                        Piece piece = new Piece { Type = pieceType, Color = pieceColor, PositionX = i, PositionY = j };
+                        cell.Piece = piece;
                     }
                     else if (i == 1)
                     {
-                        cell.Piece = new PieceViewModel(PieceType.Pawn, PieceColor.Black);
+                        Piece piece = new Piece { Type = PieceType.Pawn, Color = PieceColor.Black, PositionX = i, PositionY = j };
+                        cell.Piece = piece;
                     }
                     else if (i == 6)
                     {
-                        cell.Piece = new PieceViewModel(PieceType.Pawn, PieceColor.White);
+                        Piece piece = new Piece { Type = PieceType.Pawn, Color = PieceColor.White, PositionX = i, PositionY = j };
+                        cell.Piece = piece;
                     }
 
                     Cells.Add(cell);
                 }
+            }
+        }
+
+        public void HighlightValidMoves(List<Move> validMoves)
+        {
+            ClearHighlights();
+
+            foreach (var move in validMoves)
+            {
+                var cell = Cells.Single(c => c.X == move.ToX && c.Y == move.ToY);
+                cell.IsHighlighted = true;
+            }
+        }
+
+        public void ClearHighlights()
+        {
+            foreach (var cell in Cells)
+            {
+                cell.IsHighlighted = false;
             }
         }
 

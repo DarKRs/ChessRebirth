@@ -68,15 +68,12 @@
     <Compile Include="Services\MoveService.cs" />
     <Compile Include="Utils\Enums.cs" />
     <Compile Include="Utils\PieceToImageBrushConverter.cs" />
+    <Compile Include="Utils\RelayCommand.cs" />
     <Compile Include="ViewModels\BoardViewModel.cs" />
     <Compile Include="ViewModels\CellViewModel.cs" />
     <Compile Include="ViewModels\GameViewModel.cs" />
-    <Compile Include="ViewModels\PieceViewModel.cs" />
     <Compile Include="Views\BoardView.xaml.cs">
       <DependentUpon>BoardView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\PieceView.xaml.cs">
-      <DependentUpon>PieceView.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -97,10 +94,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\BoardView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\PieceView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
