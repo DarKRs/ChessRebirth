@@ -62,5 +62,28 @@ namespace ChessRebirth.MoveGenerators
 
             return isInCheck;
         }
+
+        public bool IsKingInCheck(Piece king)
+        {
+            PieceColor enemyColor = king.Color == PieceColor.White ? PieceColor.Black : PieceColor.White;
+
+            foreach (Piece piece in king.Board.Pieces)
+            {
+                if (piece.Color == enemyColor)
+                {
+                    List<Move> enemyMoves = GetValidMoves(piece, false);
+
+                    foreach (Move move in enemyMoves)
+                    {
+                        if (move.ToX == king.PositionX && move.ToY == king.PositionY)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+
+            return false;
+        }
     }
 }
