@@ -58,6 +58,7 @@
     <Compile Include="Services\BoardService.cs" />
     <Compile Include="Services\MoveService.cs" />
     <Compile Include="Utils\Enums.cs" />
+    <Compile Include="Utils\PieceToImageBrushConverter.cs" />
     <Compile Include="ViewModels\BoardViewModel.cs" />
     <Compile Include="ViewModels\CellViewModel.cs" />
     <Compile Include="ViewModels\GameViewModel.cs" />

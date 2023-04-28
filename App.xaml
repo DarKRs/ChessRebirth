@@ -2,9 +2,21 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ChessRebirth"
-             StartupUri="MainWindow.xaml">
+             StartupUri="MainWindow.xaml"
+             xmlns:utils="clr-namespace:ChessRebirth.Utils">
     <Application.Resources>
         <ResourceDictionary>
+            <utils:PieceToDrawingImageConverter x:Key="PieceToDrawingImageConverter"/>
+            <DataTemplate x:Key="PieceViewTemplate">
+                <Image>
+                    <Image.Source>
+                        <MultiBinding Converter="{StaticResource PieceToDrawingImageConverter}">
+                            <Binding Path="Type"/>
+                            <Binding Path="Color"/>
+                        </MultiBinding>
+                    </Image.Source>
+                </Image>
+            </DataTemplate>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary x:Name="SVG" Source="/Resourse/Dictionarys/VectorDictionary.xaml" />
             </ResourceDictionary.MergedDictionaries>
