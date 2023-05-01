@@ -34,15 +34,15 @@ namespace ChessRebirth.MoveGenerators
 
             if (!king.HasMoved && !IsKingInCheck(king))
             {
-                TryToAddCastlingMove(king, validMoves, 1, 3);
-                TryToAddCastlingMove(king, validMoves, -1, 4);
+                TryToAddCastlingMove(king, validMoves, 1, 3, checkForCheck);
+                TryToAddCastlingMove(king, validMoves, -1, 4, checkForCheck);
             }
 
             return validMoves;
         }
 
         //Рокировка
-        private void TryToAddCastlingMove(Piece king, List<Move> validMoves, int direction, int rookDistance)
+        private void TryToAddCastlingMove(Piece king, List<Move> validMoves, int direction, int rookDistance, bool checkForCheck)
         {
             bool canCastle = true;
 
@@ -64,7 +64,7 @@ namespace ChessRebirth.MoveGenerators
                 }
 
                 // Проверяем шах только для позиций, в которых король окажется после рокировки
-                if ((i == 1 || i == 2) && IsKingInCheckAfterMove(king, x, king.PositionY))
+                if ((i == 1 || i == 2) && IsKingInCheck(king))
                 {
                     canCastle = false;
                     break;

@@ -43,7 +43,7 @@ namespace ChessRebirth.MoveGenerators
                 {
                     if (move.TargetPiece.Color != queen.Color)
                     {
-                        if (!checkForCheck || !IsKingInCheckAfterMove(queen, newX, newY))
+                        if (!checkForCheck || !IsKingInCheckAfterMove(queen, newX, newY, checkForCheck))
                         {
                             validMoves.Add(move);
                         }
@@ -53,7 +53,7 @@ namespace ChessRebirth.MoveGenerators
                 }
                 else
                 {
-                    if (!checkForCheck || !IsKingInCheckAfterMove(queen, newX, newY))
+                    if (!checkForCheck || !IsKingInCheckAfterMove(queen, newX, newY, checkForCheck))
                     {
                         validMoves.Add(move);
                     }

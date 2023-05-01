@@ -52,7 +52,7 @@ namespace ChessRebirth.MoveGenerators
                             TargetPiece = targetPiece
                         };
 
-                        if (!checkForCheck || !IsKingInCheckAfterMove(bishop, newX, newY))
+                        if (!checkForCheck || !IsKingInCheckAfterMove(bishop, newX, newY, checkForCheck))
                         {
                             validMoves.Add(move);
                         }
@@ -70,7 +70,7 @@ namespace ChessRebirth.MoveGenerators
                         TargetPiece = null
                     };
 
-                    if (!checkForCheck || !IsKingInCheckAfterMove(bishop, newX, newY))
+                    if (!checkForCheck || !IsKingInCheckAfterMove(bishop, newX, newY, checkForCheck))
                     {
                         validMoves.Add(move);
                     }

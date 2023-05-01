@@ -14,8 +14,8 @@ namespace ChessRebirth.MoveGenerators
         {
             List<Move> validMoves = new List<Move>();
 
-            int direction = pawn.Color == PieceColor.White ? 1 : -1;
-            int startRank = pawn.Color == PieceColor.White ? 1 : 6;
+            int direction = pawn.Color == PieceColor.White ? -1 : 1;
+            int startRank = pawn.Color == PieceColor.White ? 6 : 1;
 
             // Одиночный ход вперед
             int newX = pawn.PositionX;
@@ -62,7 +62,7 @@ namespace ChessRebirth.MoveGenerators
 
         private void TryToAddPawnMove(Piece pawn, List<Move> validMoves, int newX, int newY, bool checkForCheck)
         {
-            if (!checkForCheck || !IsKingInCheckAfterMove(pawn, newX, newY))
+            if (!checkForCheck || !IsKingInCheckAfterMove(pawn, newX, newY,checkForCheck))
             {
                 Move move = new Move { FromX = pawn.PositionX, FromY = pawn.PositionY, ToX = newX, ToY = newY, TargetPiece = pawn.Board.GetPiece(newX, newY) };
 

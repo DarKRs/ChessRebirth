@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChessRebirth.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,19 +11,29 @@ namespace ChessRebirth.ViewModels
 {
     public class CellViewModel : INotifyPropertyChanged
     {
-        private PieceViewModel _piece;
-
         public int X { get; }
         public int Y { get; }
         public SolidColorBrush CellColor { get; }
 
-        public PieceViewModel Piece
+        private Piece _piece;
+        public Piece Piece
         {
             get => _piece;
             set
             {
                 _piece = value;
                 OnPropertyChanged(nameof(Piece));
+            }
+        }
+
+        private bool _isHighlighted;
+        public bool IsHighlighted
+        {
+            get => _isHighlighted;
+            set
+            {
+                _isHighlighted = value;
+                OnPropertyChanged(nameof(IsHighlighted));
             }
         }
 

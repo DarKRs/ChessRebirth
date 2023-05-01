@@ -20,5 +20,22 @@ namespace ChessRebirth.Models
         {
             return Pieces.FirstOrDefault(piece => piece.PositionX == x && piece.PositionY == y);
         }
+
+        public void RemovePiece(int x, int y)
+        {
+            Pieces.RemoveAll(p => p.PositionX == x && p.PositionY == y);
+        }
+
+        public Board Clone()
+        {
+            Board newBoard = new Board();
+            newBoard.Pieces = new List<Piece>(Pieces.Count);
+            foreach (Piece piece in Pieces)
+            {
+                newBoard.Pieces.Add(new Piece { Type = piece.Type,Color = piece.Color, PositionX = piece.PositionX, PositionY = piece.PositionY, HasMoved = piece.HasMoved });
+            }
+
+            return newBoard;
+        }
     }
 }

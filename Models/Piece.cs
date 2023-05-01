@@ -19,5 +19,11 @@ namespace ChessRebirth.Models
         public int BoardId { get; set; }
         public bool HasMoved { get; set; }
         public bool EnPassantAvailable { get; set; }
+
+        public void Move(int newX, int newY)
+        {
+            PositionX = newX;
+            PositionY = newY;
+        }
     }
 }

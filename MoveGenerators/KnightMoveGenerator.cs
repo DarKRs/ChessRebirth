@@ -32,7 +32,7 @@ namespace ChessRebirth.MoveGenerators
 
                 if (move.TargetPiece == null || move.TargetPiece.Color != knight.Color)
                 {
-                    if (!checkForCheck || !IsKingInCheckAfterMove(knight, newX, newY))
+                    if (!checkForCheck || !IsKingInCheckAfterMove(knight, newX, newY, checkForCheck))
                     {
                         validMoves.Add(move);
                     }
